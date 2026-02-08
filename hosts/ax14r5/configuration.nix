@@ -113,14 +113,15 @@
   fonts.packages = [pkgs.nerd-fonts.jetbrains-mono];
   fonts.fontconfig.defaultFonts.monospace = ["JetBrainsMono Nerd Font"];
 
-  # System Packages (Hanya core utilities, Apps pindah ke user)
+  # Paket
   environment.systemPackages = with pkgs; [
     git
     curl
     wget
     vim
-    home-manager # Biar bisa run command home-manager
+    home-manager
     rocmPackages.clr.icd
+    xdg-desktop-portal-wlr
 
     # GNOME Core dependencies
     gnome-extension-manager

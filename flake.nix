@@ -56,6 +56,7 @@
       modules = [
         ./hosts/ax14r5/home.nix
         inputs.nix-monitor.homeManagerModules.default
+        inputs.mango.hmModules.mango
       ];
     };
   };

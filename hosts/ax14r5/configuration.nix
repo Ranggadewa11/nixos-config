@@ -7,8 +7,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/system/mangodms/default.nix
-    ../../modules/system/stylix/default.nix
+    ../../modules/system
   ];
 
   # Bootloader & Kernel

@@ -10,14 +10,8 @@
 
   programs.home-manager.enable = true;
 
-  xdg.configFile."systemd/user/mango-session-target".source = ../../modules/users/mango-conf/mango-session-target;
-  xdg.configFile."mango".source = ../../modules/users/mango-conf;
-  xdg.configFile."helix".source = ../../modules/users/helix-conf;
-  xdg.configFile."kitty".source = ../../modules/users/kitty-conf;
-
   imports = [
-    ../../modules/users/shell/default.nix
-    ../../modules/users/bahasa/default.nix
+    ../../modules/users
   ];
 
   # PAKETTT

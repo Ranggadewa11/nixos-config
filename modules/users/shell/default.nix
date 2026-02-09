@@ -20,7 +20,7 @@
       gs = "git status";
       gaa = "git add .";
       gcm = "git commit -m";
-      gp = "git push";
+      gp = "git push origin main";
 
       updatecon = "sudo nixos-rebuild switch --flake ~/.dotfiles#ax14r5";
       updatehome = "home-manager switch --flake ~/.dotfiles#dewtf";

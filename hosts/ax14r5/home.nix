@@ -2,13 +2,14 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   home.username = "dewtf";
   home.homeDirectory = "/home/dewtf";
   home.stateVersion = "26.05";
   programs.home-manager.enable = true;
-
+  userSettings.office.enable = true;
   userSettings.recording.enable = true;
 
   imports = [

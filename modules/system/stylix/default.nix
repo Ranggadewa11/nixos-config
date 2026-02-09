@@ -6,7 +6,7 @@
   ...
 }: let
   # Shortcut ke settingan kita
-  cfg = config.mySystem.style;
+  cfg = config.systemSettings.stylix;
 
   # 1. Lokasi folder themes
   # PENTING: Jangan lupa titik koma (;) di akhir baris ini!
@@ -17,7 +17,7 @@
   theme = import (themesPath + "/${cfg.theme}/default.nix");
 in {
   # --- OPTIONS (TOMBOL) ---
-  options.mySystem.style = {
+  options.systemSettings.stylix = {
     enable = lib.mkEnableOption "Enable stylix theming";
 
     theme = lib.mkOption {

@@ -1,0 +1,2 @@
+#+title: IF U SEE THIS THAN DITCH THAT OS MOVE TO NIX
+Personal dogfiles for nixos 

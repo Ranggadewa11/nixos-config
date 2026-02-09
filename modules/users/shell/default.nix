@@ -22,11 +22,13 @@
       gcm = "git commit -m";
       gp = "git push";
 
-      updatesys = "sudo nixos-rebuild switch --flake ~/.dotfiles#ax14r5";
+      updatecon = "sudo nixos-rebuild switch --flake ~/.dotfiles#ax14r5";
       updatehome = "home-manager switch --flake ~/.dotfiles#dewtf";
+      updatesys = "cd ~/.dotfiles && sudo nixos-rebuild switch --flake .#ax14r5 && home-manager switch --flake .#dewtf";
       bersih2 = "sudo nix-collect-garbage -d";
+      cddot = "cd ~/.dotfiles";
 
-      ditsys = "hx ~/.dotfiles/hosts/ax14r5/configuration.nix";
+      ditcon = "hx ~/.dotfiles/hosts/ax14r5/configuration.nix";
       ditflake = "hx ~/.dotfiles/flake.nix";
       dithome = "hx ~/.dotfiles/hosts/ax14r5/home.nix";
     };

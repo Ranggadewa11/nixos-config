@@ -11,7 +11,6 @@
   ];
 
   # Bootloader & Kernel
-  # boot.loader.systemd-boot.enable = false; # Pastikan systemd-boot mati
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub = {
     enable = true;
@@ -46,10 +45,6 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
-  # DMS & Mango System Modules
-  programs.dms-shell.enable = true;
-  programs.mango.enable = true;
-
   # Valent
   programs.kdeconnect = {
     enable = true;
@@ -65,7 +60,6 @@
     wireplumber.enable = true;
   };
 
-  # User Account (Hanya definisi user & groups)
   users.users.dewtf = {
     isNormalUser = true;
     shell = pkgs.fish;
@@ -76,7 +70,6 @@
       "input"
       "networkmanager"
     ];
-    # Note: Packages dipindah ke Home Manager
   };
 
   # System Environment
@@ -96,18 +89,18 @@
   };
 
   # OBS Studio (Butuh di system untuk Virtual Camera)
-  programs.obs-studio = {
-    enable = true;
-    enableVirtualCamera = true;
-    plugins = with pkgs.obs-studio-plugins; [
-      wlrobs
-      obs-backgroundremoval
-      obs-pipewire-audio-capture
-      obs-vaapi
-      obs-gstreamer
-      obs-vkcapture
-    ];
-  };
+  # programs.obs-studio = {
+  #   enable = true;
+  #   enableVirtualCamera = true;
+  #   plugins = with pkgs.obs-studio-plugins; [
+  #     wlrobs
+  #     obs-backgroundremoval
+  #     obs-pipewire-audio-capture
+  #     obs-vaapi
+  #     obs-gstreamer
+  #     obs-vkcapture
+  #   ];
+  # };
 
   # Fonts (System Wide)
   fonts.packages = [pkgs.nerd-fonts.jetbrains-mono];
@@ -122,6 +115,8 @@
     home-manager
     rocmPackages.clr.icd
     xdg-desktop-portal-wlr
+    dms-shell
+    quickshell
 
     # GNOME Core dependencies
     gnome-extension-manager
@@ -129,6 +124,9 @@
     gnome-shell
     gnome-tweaks
     valent
+
+    pear-desktop
+    android-tools
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];

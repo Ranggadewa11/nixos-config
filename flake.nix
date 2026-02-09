@@ -13,7 +13,9 @@
     mango.inputs.nixpkgs.follows = "nixpkgs";
     dms.url = "github:AvengeMedia/DankMaterialShell";
     dms.inputs.nixpkgs.follows = "nixpkgs";
+    dgop.url = "github:AvengeMedia/dgop";
     quickshell.url = "git+https://git.outfoxxed.me/quickshell/quickshell";
+    quickshell.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix";
     # --- User/Home Modules ---
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
@@ -26,6 +28,7 @@
     nixpkgs-stable,
     home-manager,
     dms,
+    dgop,
     mango,
     ...
   } @ inputs: let
@@ -55,8 +58,6 @@
       };
       modules = [
         ./hosts/ax14r5/home.nix
-        inputs.nix-monitor.homeManagerModules.default
-        inputs.mango.hmModules.mango
       ];
     };
   };

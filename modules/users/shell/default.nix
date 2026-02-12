@@ -31,6 +31,8 @@
       ditcon = "hx ~/.dotfiles/hosts/ax14r5/configuration.nix";
       ditflake = "hx ~/.dotfiles/flake.nix";
       dithome = "hx ~/.dotfiles/hosts/ax14r5/home.nix";
+
+      scrcpywired = "scrcpy --render-driver=opengl";
     };
   };
   home.sessionVariables = {

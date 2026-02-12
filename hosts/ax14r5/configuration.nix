@@ -30,6 +30,9 @@
     environment.systemPackages = with pkgs; [
       android-tools
       pear-desktop
+      v4l-utils
+      scrcpy
+      qtscrcpy
     ];
 
     system.stateVersion = "25.11";

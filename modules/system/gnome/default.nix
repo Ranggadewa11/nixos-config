@@ -20,6 +20,8 @@ in {
       gnome.gvfs
       gnome-shell
       gnome-tweaks
+      xdg-desktop-portal
+      xdg-desktop-portal-gnome
       valent
     ];
     # Valent

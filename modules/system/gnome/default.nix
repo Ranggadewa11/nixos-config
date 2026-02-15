@@ -43,7 +43,7 @@ in {
       # gnome-shell-extensions
       #
       # adwaita-icon-theme
-      # nixos-background-info
+      #nixos-background-info
       gnome-backgrounds
       # gnome-bluetooth
       # gnome-color-manager
@@ -56,7 +56,7 @@ in {
       # gtk3.out # for gtk-launch program
       # xdg-user-dirs # Update user dirs as described in https://freedesktop.org/wiki/Software/xdg-user-dirs/
       # xdg-user-dirs-gtk # Used to create the default bookmarks
-      #
+      #i
       baobab
       epiphany
       gnome-text-editor
@@ -67,7 +67,7 @@ in {
       gnome-font-viewer
       gnome-logs
       gnome-music
-      # gnome-system-monitor
+      gnome-system-monitor
       gnome-weather
       # loupe
       # nautilus

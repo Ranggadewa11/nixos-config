@@ -33,13 +33,19 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
+    overlays = [
+      #
+    ];
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
+      allowUnfreePredicate = _: true;
+      inherit overlays;
     };
     pkgs-stable = import nixpkgs-stable {
       inherit system;
       config.allowUnfree = true;
+      allowUnfreePredicate = _: true;
     };
   in {
     nixosConfigurations.ax14r5 = nixpkgs.lib.nixosSystem {

@@ -29,8 +29,8 @@ in {
       obs-vkcapture
     ];
     home.packages = with pkgs; [
-      kdePackages.kdenlive
-      #tenacity
+      # kdePackages.kdenlive
+      # tenacity
     ];
   };
 }

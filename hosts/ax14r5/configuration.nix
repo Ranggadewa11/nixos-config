@@ -24,8 +24,8 @@
       stylix.enable = true;
     };
 
-    services.displayManager.gdm.enable = true;
-
+    # services.displayManager.gdm.enable = true;
+    services.displayManager.ly.enable = true;
     # Punten PAKET
     environment.systemPackages = with pkgs; [
       android-tools
